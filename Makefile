@@ -6,7 +6,7 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2020/02/07 13:52:52 by trcottam         ###   ########.fr        #
+#    Updated: 2020/10/16 17:20:51 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,7 @@ re:			fclean all
 bonus:		$(OBJS) $(OBJS_BONUS)
 	$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
 
-test:	$(NAME)
+test:	bonus
 	gcc $(SRC_TEST) -L. -lft
 
 .PHONY:		all clean fclean re bonus
