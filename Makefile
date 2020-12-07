@@ -6,11 +6,9 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2020/10/16 17:20:51 by trcottam         ###   ########.fr        #
+#    Updated: 2020/12/07 11:28:29 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-SRC_TEST = test.c
 
 SRCS =	ft_memset.c\
 		ft_bzero.c\
@@ -85,8 +83,5 @@ re:			fclean all
 
 bonus:		$(OBJS) $(OBJS_BONUS)
 	$(AR) $(NAME) $(OBJS) $(OBJS_BONUS)
-
-test:	bonus
-	gcc $(SRC_TEST) -L. -lft
 
 .PHONY:		all clean fclean re bonus
