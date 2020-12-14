@@ -6,11 +6,26 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2020/12/14 13:52:01 by trcottam         ###   ########.fr        #
+#    Updated: 2020/12/14 15:58:22 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	ft_memset.c\
+NAME = libft.a
+
+SRC_DIR = src
+OBJ_DIR = obj
+INC_DIR = inc
+
+CC = gcc
+AR = ar rc
+MKDIR = mkdir -p
+RM = rm -fr
+
+CFLAGS = -Wall -Werror -Wextra -I$(INC_DIR)
+
+OBJ = $(SRC:%=$(OBJ_DIR)/%.o)
+
+SRC =	ft_memset.c\
 		ft_memcpy.c\
 		ft_memccpy.c\
 		ft_memmove.c\
@@ -53,27 +68,25 @@ SRCS =	ft_memset.c\
 		ft_lstiter.c\
 		ft_lstmap.c\
 
-OBJS = $(SRCS:.c=.o)
-
-NAME = libft.a
-
-CFLAGS = -Wall -Werror -Wextra
-
-AR = ar rc
-
-RM = rm -f
-
 .PHONY:	all clean fclean re
+
+.SECONDEXPANSION:
 
 all:	$(NAME)
 
-$(NAME):	$(OBJS)
-	$(AR) $(NAME) $(OBJS)
+$(NAME):	$(OBJ)
+	$(AR) $(NAME) $(OBJ)
 
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJ_DIR)
 
 fclean:		clean
 	$(RM) $(NAME)
 
 re:	fclean all
+
+%/:
+	$(MKDIR) $@
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/% | $$(dir $(OBJ_DIR)/%)
+	$(CC) $(CFLAGS) -c -o $@ $<
