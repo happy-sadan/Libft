@@ -6,7 +6,7 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2020/12/13 23:47:41 by trcottam         ###   ########.fr        #
+#    Updated: 2020/12/14 13:34:55 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ RM = rm -f
 $(NAME):	$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-all:		$(NAME)
+all:	$(NAME)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_BONUS)
@@ -74,6 +74,6 @@ clean:
 fclean:		clean
 	$(RM) $(NAME)
 
-re:			fclean all
+re:	fclean all
 
-.PHONY:		all clean fclean re bonus
+.PHONY:	all clean fclean re bonus
