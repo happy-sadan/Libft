@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 14:28:57 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/07 16:58:51 by trcottam         ###   ########.fr       */
+/*   Updated: 2020/12/14 18:29:02 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <unistd.h>
+# include <stdbool.h>
+# include <stdint.h>
 # include <stdlib.h>
 # include <limits.h>
 
@@ -74,5 +76,19 @@ t_list				*ft_lstmap(
 						t_list *lst,
 						void *(*f)(void *),
 						void (*del)(void *));
+
+int					ft_abs(int j);
+int					ft_islower(int c);
+int					ft_isupper(int c);
+char				*ft_strstr(const char *haystack, const char *needle);
+char				*ft_strcpy(char *dest, const char *src);
+char				*ft_strcat(char *dest, const char *str);
+char				*ft_strcomb(const char *s1, const char *s2);
+char				*ft_strprepend(char **str, const char *prefix);
+char				*ft_strappend(char **str, const char *suffix);
+char				*ft_strpad(char **str, char c, size_t len, bool end);
+char				*ft_chartostr(char c);
+char				*ft_uimaxtobase(uintmax_t n, unsigned int base);
+char				*ft_imaxtobase(intmax_t n, unsigned int base);
 
 #endif

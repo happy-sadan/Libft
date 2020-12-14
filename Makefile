@@ -6,7 +6,7 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2020/12/14 15:58:22 by trcottam         ###   ########.fr        #
+#    Updated: 2020/12/14 18:19:18 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,19 @@ SRC =	ft_memset.c\
 		ft_lstclear.c\
 		ft_lstiter.c\
 		ft_lstmap.c\
+		ft_abs.c\
+		ft_islower.c\
+		ft_isupper.c\
+		ft_strstr.c\
+		ft_strcpy.c\
+		ft_strcat.c\
+		ft_strcomb.c\
+		ft_strprepend.c\
+		ft_strappend.c\
+		ft_strpad.c\
+		ft_chartostr.c\
+		ft_uimaxtobase.c\
+		ft_imaxtobase.c\
 
 .PHONY:	all clean fclean re
 
