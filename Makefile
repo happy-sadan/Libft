@@ -6,7 +6,7 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2020/12/14 13:35:37 by trcottam         ###   ########.fr        #
+#    Updated: 2020/12/14 13:41:45 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ AR = ar rc
 
 RM = rm -f
 
-.PHONY:	all clean fclean re bonus
+.PHONY:	all clean fclean re
 
 $(NAME):	$(OBJS)
 	$(AR) $(NAME) $(OBJS)
