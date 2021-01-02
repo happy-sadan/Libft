@@ -6,7 +6,7 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2020/12/14 18:19:18 by trcottam         ###   ########.fr        #
+#    Updated: 2021/01/02 21:55:26 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,13 @@ NAME = libft.a
 
 SRC_DIR = src
 OBJ_DIR = obj
-INC_DIR = inc
 
 CC = gcc
 AR = ar rc
 MKDIR = mkdir -p
 RM = rm -fr
 
-CFLAGS = -Wall -Werror -Wextra -I$(INC_DIR)
+CFLAGS = -Wall -Werror -Wextra -I.
 
 OBJ = $(SRC:%=$(OBJ_DIR)/%.o)
 
