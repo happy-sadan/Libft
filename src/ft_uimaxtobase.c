@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 14:56:41 by trcottam          #+#    #+#             */
-/*   Updated: 2020/12/14 18:31:25 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/01/03 23:04:12 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ static size_t	ft_uimaxtobase_len(uintmax_t n, int base)
 char			*ft_uimaxtobase(uintmax_t n, unsigned int base)
 {
 	const char	*digits;
-	size_t	uimaxtobase_len;
-	char	*uimaxtobase;
-	size_t	i;
+	size_t		uimaxtobase_len;
+	char		*uimaxtobase;
+	size_t		i;
 
 	digits = "0123456789abcdefghijklmnopqrstuvwxyz";
 	if (base < 2)
