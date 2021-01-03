@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 14:28:57 by trcottam          #+#    #+#             */
-/*   Updated: 2020/12/14 18:29:02 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/01/02 22:35:51 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@
 # include <unistd.h>
 # include <stdbool.h>
 # include <stdint.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
+
+# define BUFFER_SIZE 4096
 
 typedef struct		s_list
 {
@@ -90,5 +93,7 @@ char				*ft_strpad(char **str, char c, size_t len, bool end);
 char				*ft_chartostr(char c);
 char				*ft_uimaxtobase(uintmax_t n, unsigned int base);
 char				*ft_imaxtobase(intmax_t n, unsigned int base);
+
+int		            get_next_line(int fd, char **line);
 
 #endif
