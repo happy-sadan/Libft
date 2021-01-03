@@ -6,7 +6,7 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2021/01/03 21:29:02 by trcottam         ###   ########.fr        #
+#    Updated: 2021/01/03 21:50:53 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRC =	ft_memset.c\
 		ft_imaxtobase.c\
 		get_next_line.c\
 		ft_strpbrk.c\
+		ft_strtok.c\
 
 .PHONY:	all clean fclean re
 
