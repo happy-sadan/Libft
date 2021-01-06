@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 14:28:57 by trcottam          #+#    #+#             */
-/*   Updated: 2021/01/03 23:26:32 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/01/06 10:30:56 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 typedef struct		s_list
 {
-	void			*content;
+	void			*data;
 	struct s_list	*next;
 }					t_list;
 
