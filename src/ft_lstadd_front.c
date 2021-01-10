@@ -6,21 +6,21 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 10:17:37 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/04 11:51:49 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/01/10 22:58:07 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *item)
 {
-	if (!alst || !new)
+	if (!lst || !item)
 		return ;
-	if (!*alst)
+	if (!*lst)
 	{
-		*alst = new;
+		*lst = item;
 		return ;
 	}
-	new->next = *alst;
-	*alst = new;
+	item->next = *lst;
+	*lst = item;
 }
