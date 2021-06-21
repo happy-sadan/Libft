@@ -6,7 +6,7 @@
 #    By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/09 13:54:47 by trcottam          #+#    #+#              #
-#    Updated: 2021/06/21 17:56:57 by trcottam         ###   ########.fr        #
+#    Updated: 2021/06/21 23:14:31 by trcottam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,6 @@ SRC =	ft_memset.c\
 		ft_chartostr.c\
 		ft_uimaxtobase.c\
 		ft_imaxtobase.c\
-		get_next_line.c\
 		ft_strpbrk.c\
 		ft_strtok.c\
 		ft_strcmp.c\

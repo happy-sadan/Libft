@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/21 17:57:58 by trcottam          #+#    #+#             */
-/*   Updated: 2021/06/21 17:58:14 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 23:14:24 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,6 @@ char				*ft_strpad(char **str, char c, size_t len, bool end);
 char				*ft_chartostr(char c);
 char				*ft_uimaxtobase(uintmax_t n, unsigned int base);
 char				*ft_imaxtobase(intmax_t n, unsigned int base);
-
-int					get_next_line(int fd, char **line);
 
 char				*ft_strpbrk(const char *s, const char *accept);
 char				*ft_strtok(char *str, const char *delim);
