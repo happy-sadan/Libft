@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/09 14:28:57 by trcottam          #+#    #+#             */
-/*   Updated: 2021/01/12 01:46:33 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 17:55:03 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,7 @@ int					get_next_line(int fd, char **line);
 char				*ft_strpbrk(const char *s, const char *accept);
 char				*ft_strtok(char *str, const char *delim);
 int					ft_strcmp(const char *s1, const char *s2);
+int					ft_max_int(int i1, int i2);
+int					ft_min_int(int i1, int i2);
 
 #endif
