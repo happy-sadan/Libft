@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 20:11:39 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/07 15:16:10 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 18:40:32 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	if (size > dst_len)
 		dst[dst_len + i] = '\0';
-	return (src_len + (size < dst_len ? size : dst_len));
+	return (src_len + ft_min_int(size, dst_len));
 }

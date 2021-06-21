@@ -6,13 +6,13 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 10:45:38 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/04 10:50:10 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 17:40:29 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list				*ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 20:40:55 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/07 14:18:46 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 18:05:28 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (ft_strchr(set, s1[end]))
 		end--;
-	if (!(trim = malloc(sizeof(char) * (end - start + 2))))
+	trim = malloc(sizeof(char) * (end - start + 2));
+	if (!trim)
 		return (NULL);
 	ft_memcpy(trim, s1 + start, end - start + 1);
 	trim[end - start + 1] = '\0';

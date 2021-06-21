@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 15:12:27 by trcottam          #+#    #+#             */
-/*   Updated: 2020/12/14 18:29:20 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 17:46:56 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strcomb(const char *s1, const char *s2)
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	if (!(str = malloc(sizeof(char) * (s1_len + s2_len + 1))))
+	str = malloc(sizeof(char) * (s1_len + s2_len + 1));
+	if (!str)
 		return (NULL);
 	ft_memcpy(str, s1, s1_len);
 	ft_memcpy(str + s1_len, s2, s2_len);

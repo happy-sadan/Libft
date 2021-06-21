@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/09 14:28:57 by trcottam          #+#    #+#             */
-/*   Updated: 2021/06/21 17:55:03 by trcottam         ###   ########.fr       */
+/*   Created: 2021/06/21 17:57:58 by trcottam          #+#    #+#             */
+/*   Updated: 2021/06/21 17:58:14 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 
 # define BUFFER_SIZE 4096
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*data;
 	struct s_list	*next;
-}					t_list;
+}	t_list;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);

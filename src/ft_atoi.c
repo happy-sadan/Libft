@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 15:34:32 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/07 16:03:44 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 17:36:25 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static long	ft_postoi(const char *str, int len)
 	return (n);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		i;
 	int		is_pos;
@@ -51,5 +51,8 @@ int			ft_atoi(const char *str)
 	n = ft_postoi(str + i, n_len);
 	if (n == -1 || (is_pos && n == (long)INT_MAX + 1))
 		return (-is_pos);
-	return (is_pos ? n : -n);
+	if (is_pos)
+		return (n);
+	else
+		return (-n);
 }

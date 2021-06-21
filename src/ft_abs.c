@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/09 16:51:31 by trcottam          #+#    #+#             */
-/*   Updated: 2020/12/14 18:13:08 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 17:35:20 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int	ft_abs(int j)
 {
-	return (j >= 0 ? j : -j);
+	if (j >= 0)
+		return (j);
+	else
+		return (-j);
 }

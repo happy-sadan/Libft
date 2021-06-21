@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 14:56:41 by trcottam          #+#    #+#             */
-/*   Updated: 2021/01/03 23:04:12 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 18:08:33 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static size_t	ft_uimaxtobase_len(uintmax_t n, int base)
 	return (i);
 }
 
-char			*ft_uimaxtobase(uintmax_t n, unsigned int base)
+char	*ft_uimaxtobase(uintmax_t n, unsigned int base)
 {
 	const char	*digits;
 	size_t		uimaxtobase_len;
@@ -40,7 +40,8 @@ char			*ft_uimaxtobase(uintmax_t n, unsigned int base)
 	if (n == 0)
 		return (ft_strdup("0"));
 	uimaxtobase_len = ft_uimaxtobase_len(n, base);
-	if (!(uimaxtobase = malloc(sizeof(char) * uimaxtobase_len + 1)))
+	uimaxtobase = malloc(sizeof(char) * uimaxtobase_len + 1);
+	if (!uimaxtobase)
 		return (NULL);
 	uimaxtobase[uimaxtobase_len] = '\0';
 	i = uimaxtobase_len - 1;

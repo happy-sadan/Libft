@@ -6,13 +6,13 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/13 19:24:42 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/07 14:10:12 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 17:38:27 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }

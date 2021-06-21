@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 23:02:42 by trcottam          #+#    #+#             */
-/*   Updated: 2020/12/14 18:51:16 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 18:43:09 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,17 @@ char	*ft_strpad(char **str, char c, size_t len, bool end)
 	char	*pad_start;
 
 	str_len = ft_strlen(*str);
-	len = (len >= str_len ? len : str_len);
+	len = ft_max_int(len, str_len);
 	pad_len = len - str_len;
-	if (!(new_str = malloc(sizeof(char) * (len + 1))))
+	new_str = malloc(sizeof(char) * (len + 1));
+	if (!new_str)
 		return (NULL);
-	str_start = new_str + (end ? 0 : pad_len);
-	pad_start = new_str + (end ? str_len : 0);
+	str_start = new_str;
+	pad_start = new_str;
+	if (end)
+		pad_start += str_len;
+	else
+		str_start += pad_len;
 	ft_strcpy(str_start, *str);
 	ft_memset(pad_start, c, pad_len);
 	new_str[len] = '\0';

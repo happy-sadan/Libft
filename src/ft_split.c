@@ -6,20 +6,21 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/19 17:32:03 by trcottam          #+#    #+#             */
-/*   Updated: 2020/02/07 13:58:34 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 22:27:08 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char		*ft_strndup(const char *s1, size_t n)
+static char	*ft_strndup(const char *s1, size_t n)
 {
 	char	*s2;
 	size_t	len;
 	size_t	i;
 
-	len = (n <= ft_strlen(s1) ? n : ft_strlen(s1));
-	if (!(s2 = malloc(sizeof(char) * (len + 1))))
+	len = ft_min_int(n, ft_strlen(s1));
+	s2 = malloc(sizeof(char) * (len + 1));
+	if (!s2)
 		return (NULL);
 	i = 0;
 	while (i < len)
@@ -47,16 +48,20 @@ static size_t	ft_substrcnt(char const *s, char c)
 	return (substr_count);
 }
 
-static char		*ft_worddup(const char *str, const char sep)
+static char	*ft_worddup(const char *str, const char sep)
 {
 	size_t	substr_len;
 
-	if (!(substr_len = ft_strchr(str, sep) - str))
+	if (ft_strchr(str, sep))
+		substr_len = ft_strchr(str, sep) - str;
+	else
+		substr_len = ft_strlen(str);
+	if (!substr_len)
 		substr_len = ft_strlen(str);
 	return (ft_strndup(str, substr_len));
 }
 
-static void		ft_split_free(char **split)
+static void	ft_split_free(char **split)
 {
 	size_t	i;
 
@@ -69,14 +74,14 @@ static void		ft_split_free(char **split)
 	free(split);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	size_t	i;
 	size_t	substr_count;
 	char	**split;
-	char	*substr;
 
-	if (!s || !(split = ft_calloc(ft_substrcnt(s, c) + 1, sizeof(char *))))
+	split = ft_calloc(ft_substrcnt(s, c) + 1, sizeof(char *));
+	if (!s || !split)
 		return (NULL);
 	substr_count = 0;
 	i = 0;
@@ -84,12 +89,12 @@ char			**ft_split(char const *s, char c)
 	{
 		if (s[i] != c && (i == 0 || s[i - 1] == c))
 		{
-			if (!(substr = ft_worddup(s + i, c)))
+			split[substr_count] = ft_worddup(s + i, c);
+			if (!split[substr_count])
 			{
 				ft_split_free(split);
 				return (NULL);
 			}
-			split[substr_count] = substr;
 			substr_count++;
 		}
 		i++;
