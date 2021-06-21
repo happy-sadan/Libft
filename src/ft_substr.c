@@ -6,7 +6,7 @@
 /*   By: trcottam <trcottam@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 19:56:11 by trcottam          #+#    #+#             */
-/*   Updated: 2021/06/21 18:05:43 by trcottam         ###   ########.fr       */
+/*   Updated: 2021/06/21 22:53:25 by trcottam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	substr = malloc(sizeof(char) * (len + 1));
+	if (start >= ft_strlen(s))
+	{
+		substr[0] = '\0';
+		return (substr);
+	}
 	if (!s || !substr)
 		return (NULL);
 	i = 0;
